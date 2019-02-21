@@ -7,7 +7,11 @@ body{
     padding:0;
     margin:0;
     display: grid;
-grid-template-columns: 300px minmax(auto, 800px);
+grid-template-columns: 300px auto;
+}
+
+section > *{
+    max-width:800px;
 }
 
 /* ================================================ */
@@ -15,6 +19,7 @@ grid-template-columns: 300px minmax(auto, 800px);
 /* ================================================ */
 
 :root{
+--grid-unit: 8px;
 --type-sans: 'Krub', sans-serif;
 --type-serif: 'Merriweather', serif;
 }
@@ -50,7 +55,7 @@ p.minor_bold, th{
     text-align: left;
 }
 
-p{
+p,li{
     /* body */
     font-size: 18px;
     font-family: var(--type-serif);
@@ -99,6 +104,61 @@ h1.hero{
 }
 
 
+.italic{
+    font-style: italic;
+}
+
+blockquote{
+    border-left: calc(1 * var(--grid-unit)) blue solid;
+    padding: calc(2 * var(--grid-unit));
+    margin: 0 0 0 calc(4 * var(--grid-unit));
+    background-color: #ced8ff;
+}
+
+ul{
+    list-style:none;
+    padding: 0 0 0 calc(var(--grid-unit) * 3);
+    margin:0 0 0 calc(4 * var(--grid-unit));
+}
+
+li{
+    margin-bottom:calc(1 * var(--grid-unit));
+}
+
+li::before {
+    display: block;
+    position: absolute;
+    background: red;
+    height: calc(1 * var(--grid-unit));
+    width: calc(1 * var(--grid-unit));
+    border-radius:50%;
+    content: '';
+    transform: translate(calc(-3 * var(--grid-unit)), calc(var(--grid-unit)));
+
+}
+
+
+/* ================================================ */
+/* SECTIONS */
+/* ================================================ */
+
+section{
+    padding:calc(3 * var(--grid-unit))
+}
+.section_hero{
+    padding: 1em 2em;
+    background:#ff0053;
+}
+
+
+/* ================================================ */
+/* ASIDE */
+/* ================================================ */
+
+aside{
+    background:#f1f1f1;
+}
+
 /* ================================================ */
 /* TABLES */
 /* ================================================ */
@@ -108,19 +168,17 @@ table{
     border-collapse: collapse;
 }
 
+td > *{
+    margin:0;
+}
+
 table,th,td{
     border:1px solid black;
     padding: 0.5em 0.8em;
 }
 
 
-/* ================================================ */
-/* SECTIONS */
-/* ================================================ */
-.section_hero{
-    padding: 1em 2em;
-    background:#ff0053;
-}
+
 
 /* ================================================ */
 /* LAYOUT */
