@@ -4,6 +4,8 @@
 }
 
 body{
+    padding:0;
+    margin:0;
     display: grid;
 grid-template-columns: 300px minmax(auto, 800px);
 }
@@ -20,6 +22,7 @@ grid-template-columns: 300px minmax(auto, 800px);
 p.tiny{
     /* tiny */
     font-size: 11px;
+    font-family: var(--type-serif);
     font-weight:400;
 }
 
@@ -27,13 +30,24 @@ p.tiny{
 p.small{
     /* small */
     font-size: 13px;
+    font-family: var(--type-serif);
     font-weight:400;
 }
 
-p.minor{
+p.minor, td{
     /* body minor*/
     font-size: 15px;
+    font-family: var(--type-serif);
     font-weight:400;
+    
+}
+
+p.minor_bold, th{
+    
+    font-size: 15px;
+    font-family: var(--type-serif);
+    font-weight:900;
+    text-align: left;
 }
 
 p{
@@ -41,11 +55,14 @@ p{
     font-size: 18px;
     font-family: var(--type-serif);
     font-weight:400;
+    line-height:1.5;
+    text-align: left;
 }
 
-p.minor{
+p.major{
     /* body major*/
     font-size: 21px;
+    font-family: var(--type-serif);
     font-weight:400;
 }
 
@@ -54,6 +71,7 @@ h3{
       font-size: 30px;
       font-family: var(--type-sans);  
       font-weight:400;
+      line-height:1.5;
 }
 
 h2{
@@ -61,6 +79,7 @@ h2{
       font-size: 41px;
       font-family: var(--type-sans);  
       font-weight:700;
+      line-height:1.5;
 }
 
 h1{
@@ -68,6 +87,7 @@ h1{
       font-size: 57px;
       font-family: var(--type-sans);  
       font-weight:700;
+      line-height:1.5;
 }
 
 h1.hero{
@@ -75,6 +95,7 @@ h1.hero{
     font-size: 67px;
     font-family: var(--type-sans);  
     font-weight:700;
+    line-height:1.5;
 }
 
 
@@ -84,4 +105,26 @@ h1.hero{
 
 table{
     width:100%;
+    border-collapse: collapse;
+}
+
+table,th,td{
+    border:1px solid black;
+    padding: 0.5em 0.8em;
+}
+
+
+/* ================================================ */
+/* SECTIONS */
+/* ================================================ */
+.section_hero{
+    padding: 1em 2em;
+    background:#ff0053;
+}
+
+/* ================================================ */
+/* LAYOUT */
+/* ================================================ */
+menu {
+    position: fixed;
 }
