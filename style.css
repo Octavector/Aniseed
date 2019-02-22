@@ -22,6 +22,22 @@ section > *{
 --grid-unit: 8px;
 --type-sans: 'Krub', sans-serif;
 --type-serif: 'Merriweather', serif;
+
+--col-black:#0F0F0F;
+--col-grey-major:#6E605E;
+--col-grey:#C9B0AD;
+--col-grey-minor:#F2EEED;
+--col-white:#ffffff;
+--col-red: #E01425;
+--col-orange: #E05114;
+--col-yellow: #E0AD14;
+--col-green:#098F23;
+--col-cyan:#0A77A6;
+--col-blue:#3810B0;
+--col-purple:#7B10B0;
+--col-pink:#E00D42;
+
+
 }
 
 p.tiny{
@@ -29,6 +45,7 @@ p.tiny{
     font-size: 11px;
     font-family: var(--type-serif);
     font-weight:400;
+    color:var(--col-black);
 }
 
 
@@ -37,6 +54,7 @@ p.small{
     font-size: 13px;
     font-family: var(--type-serif);
     font-weight:400;
+    color:var(--col-black);
 }
 
 p.minor, td{
@@ -44,7 +62,7 @@ p.minor, td{
     font-size: 15px;
     font-family: var(--type-serif);
     font-weight:400;
-    
+    color:var(--col-black);
 }
 
 p.minor_bold, th{
@@ -53,6 +71,7 @@ p.minor_bold, th{
     font-family: var(--type-serif);
     font-weight:900;
     text-align: left;
+    color:var(--col-black);
 }
 
 p,li{
@@ -62,6 +81,7 @@ p,li{
     font-weight:400;
     line-height:1.5;
     text-align: left;
+    color:var(--col-black);
 }
 
 p.major{
@@ -69,6 +89,7 @@ p.major{
     font-size: 21px;
     font-family: var(--type-serif);
     font-weight:400;
+    color:var(--col-black);
 }
 
 h3{
@@ -77,6 +98,7 @@ h3{
       font-family: var(--type-sans);  
       font-weight:400;
       line-height:1.5;
+      color:var(--col-black);
 }
 
 h2{
@@ -85,6 +107,7 @@ h2{
       font-family: var(--type-sans);  
       font-weight:700;
       line-height:1.5;
+      color:var(--col-black);
 }
 
 h1{
@@ -93,6 +116,7 @@ h1{
       font-family: var(--type-sans);  
       font-weight:700;
       line-height:1.5;
+      color:var(--col-black);
 }
 
 h1.hero{
@@ -101,6 +125,7 @@ h1.hero{
     font-family: var(--type-sans);  
     font-weight:700;
     line-height:1.5;
+    color:var(--col-black);
 }
 
 
@@ -147,16 +172,18 @@ section{
 }
 .section_hero{
     padding: 1em 2em;
-    background:#ff0053;
+    background:var(--col-pink);
 }
-
+.section_hero h1{
+    color:white;
+}
 
 /* ================================================ */
 /* ASIDE */
 /* ================================================ */
 
 aside{
-    background:#f1f1f1;
+    background:var(--col-grey-minor);
 }
 
 /* ================================================ */
@@ -172,12 +199,40 @@ td > *{
     margin:0;
 }
 
+tr:nth-child(even){
+    background-color:var(--col-grey-minor);
+}
+
 table,th,td{
-    border:1px solid black;
+    border:1px solid var(--col-black);
     padding: 0.5em 0.8em;
 }
 
+/* ================================================ */
+/* SWATCHES */
+/* ================================================ */
 
+.swatch{
+    width:calc(5 * var(--grid-unit));
+    height:calc(5 * var(--grid-unit));
+    border-radius:4px;
+    border:1px solid var(--col-grey-major);
+}
+
+.col_black{background-color:var(--col-black);}
+.col_grey_major{background-color:var(--col-grey-major);}
+.col_grey{background-color:var(--col-grey);}
+.col_grey_minor{background-color:var(--col-grey-minor);}
+.col_white{background-color:var(--col-white);}
+
+.col_red{background-color:var(--col-red);}
+.col_orange{background-color:var(--col-orange);}
+.col_yellow{background-color:var(--col-yellow);}
+.col_green{background-color:var(--col-green);}
+.col_cyan{background-color:var(--col-cyan);}
+.col_blue{background-color:var(--col-blue);}
+.col_purple{background-color:var(--col-purple);}
+.col_pink{background-color:var(--col-pink);}
 
 
 /* ================================================ */
@@ -186,3 +241,5 @@ table,th,td{
 menu {
     position: fixed;
 }
+
+
