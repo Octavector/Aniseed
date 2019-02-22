@@ -18,8 +18,8 @@
             <p>Foundation</p>
             <ul>
                 <li><a href="">Grid</a></li>
-                <li> <a href="">Colour</a></li>
                 <li> <a href="">Typography</a></li>
+                <li> <a href="">Colour</a></li>
                 <li> <a href="">Buttons</a></li>
             </ul>
             <p>Components</p>
@@ -61,63 +61,81 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><p class="tiny">Tiny</p></td>
+                        <td>
+                            <p class="tiny">Tiny</p>
+                        </td>
                         <td>11px</td>
                         <td>400</td>
                         <td>1.5</td>
                         <td>Sans-serif</td>
                     </tr>
                     <tr>
-                        <td><p class="small">Small</p></td>
+                        <td>
+                            <p class="small">Small</p>
+                        </td>
                         <td>13px</td>
                         <td>400</td>
                         <td>1.5</td>
                         <td>Sans-serif</td>
                     </tr>
                     <tr>
-                        <td><p class="minor">Body Minor</p></td>
+                        <td>
+                            <p class="minor">Body Minor</p>
+                        </td>
                         <td>15px</td>
                         <td>400</td>
                         <td>1.5</td>
                         <td>Sans-serif</td>
                     </tr>
                     <tr>
-                        <td><p>Body</p></td>
+                        <td>
+                            <p>Body</p>
+                        </td>
                         <td>18px</td>
                         <td>400</td>
                         <td>1.5</td>
                         <td>Sans-serif</td>
                     </tr>
                     <tr>
-                        <td><p class="major">Body Major</p></td>
+                        <td>
+                            <p class="major">Body Major</p>
+                        </td>
                         <td>21px</td>
                         <td>400</td>
                         <td>1.5</td>
                         <td>Sans-serif</td>
                     </tr>
                     <tr>
-                        <td><h3>Header Minor</h3></td>
+                        <td>
+                            <h3>Header Minor</h3>
+                        </td>
                         <td>30px</td>
                         <td>400</td>
                         <td>1.5</td>
                         <td>Serif</td>
                     </tr>
                     <tr>
-                        <td><h2>Header</h2></td>
+                        <td>
+                            <h2>Header</h2>
+                        </td>
                         <td>41px</td>
                         <td>700</td>
                         <td>1.5</td>
                         <td>Serif</td>
                     </tr>
                     <tr>
-                        <td><h1>Header Major</h1></td>
+                        <td>
+                            <h1>Header Major</h1>
+                        </td>
                         <td>57px</td>
                         <td>700</td>
                         <td>1.5</td>
                         <td>Serif</td>
                     </tr>
                     <tr>
-                        <td><h1 class="hero">Hero</h1></td>
+                        <td>
+                            <h1 class="hero">Hero</h1>
+                        </td>
                         <td>67px</td>
                         <td>700</td>
                         <td>1.5</td>
@@ -132,10 +150,12 @@
             <h3>Pull Quote</h3>
             <blockquote>
                 <p class="major">You know the golden rule, don’t you boy? Those who have the gold make the rules.</p>
-                <footer><p class="minor italic"> — Crazy hunch-backed old guy from the movie Aladdin</p></footer>
+                <footer>
+                    <p class="minor italic"> — Crazy hunch-backed old guy from the movie Aladdin</p>
+                </footer>
             </blockquote>
 
-            <h3>Lists</h3> 
+            <h3>Lists</h3>
             <ul>
                 <li>William Blake</li>
                 <li>William Wordsworth</li>
@@ -146,7 +166,147 @@
             </ul>
         </section>
         <section>
-                <h2>Buttons</h2>
+            <h2>Colour</h2>
+
+            <h3>Palette</h3>
+
+            <!--
+
+                --col-black:#0F0F0F;
+--col-grey-major:#6E605E;
+--col-grey:#C9B0AD;
+--col-grey-minor:#F2EEED;
+--col-white:#ffffff;
+--col-red: #E01425;
+--col-orange: #E05114;
+--col-yellow: #E0AD14;
+--col-green:#098F23;
+--col-cyan:#0A77A6;
+--col-blue:#3810B0;
+--col-purple:#7B10B0;
+--col-pink:#E00D42;
+            -->
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Swatch</th>
+                        <th>Name</th>
+                        <th>Hex</th>
+                        <th>HSB</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="swatch col_black"></div>
+                        </td>
+                        <td>Black</td>
+                        <td>#0F0F0F</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_grey_major"></div>
+                        </td>
+                        <td>Grey Major</td>
+                        <td>#6E605E</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_grey"></div>
+                        </td>
+                        <td>Grey</td>
+                        <td>#C9B0AD</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_grey_minor"></div>
+                        </td>
+                        <td>Grey Minor</td>
+                        <td>#F2EEED</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_white"></div>
+                        </td>
+                        <td>White</td>
+                        <td>#ffffff</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_red"></div>
+                        </td>
+                        <td>Red</td>
+                        <td>#E01425</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_orange"></div>
+                        </td>
+                        <td>Orange</td>
+                        <td>#E05114</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_yellow"></div>
+                        </td>
+                        <td>Yellow</td>
+                        <td>#E0AD14</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_green"></div>
+                        </td>
+                        <td>Green</td>
+                        <td>#098F23</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_cyan"></div>
+                        </td>
+                        <td>Cyan</td>
+                        <td>#0A77A6</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_blue"></div>
+                        </td>
+                        <td>Blue</td>
+                        <td>#3810B0</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_purple"></div>
+                        </td>
+                        <td>Purple</td>
+                        <td>#7B10B0</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_pink"></div>
+                        </td>
+                        <td>Pink</td>
+                        <td>#E00D42</td>
+                        <td>1.5</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        <section>
+            <h2>Buttons</h2>
         </section>
     </main>
 
