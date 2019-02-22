@@ -28,14 +28,21 @@ section > *{
 --col-grey:#C9B0AD;
 --col-grey-minor:#F2EEED;
 --col-white:#ffffff;
---col-red: #E01425;
---col-orange: #E05114;
---col-yellow: #E0AD14;
---col-green:#098F23;
---col-cyan:#0A77A6;
---col-blue:#3810B0;
---col-purple:#7B10B0;
---col-pink:#E00D42;
+--col-red: #FC3C3C;
+--col-orange: #ED6A3A;
+--col-brown:#8C6851;
+--col-yellow: #F8B500;
+--col-green:#438C2E;
+--col-cyan:#00ADB5;
+--col-blue:#00445E;
+--col-purple:#681E70;
+--col-pink:#CF1264;
+
+
+/*Dark - 10 Brightness*/
+
+--col-blue-light:#005778;
+--col-blue-dark:#003245;
 
 
 }
@@ -43,7 +50,7 @@ section > *{
 p.tiny{
     /* tiny */
     font-size: 11px;
-    font-family: var(--type-serif);
+    font-family: var(--type-sans-serif);
     font-weight:400;
     color:var(--col-black);
 }
@@ -78,6 +85,16 @@ p,li{
     /* body */
     font-size: 18px;
     font-family: var(--type-serif);
+    font-weight:400;
+    line-height:1.5;
+    text-align: left;
+    color:var(--col-black);
+}
+
+p.sans, button{
+    /* body sans*/
+    font-size: 18px;
+    font-family: var(--type-sans);
     font-weight:400;
     line-height:1.5;
     text-align: left;
@@ -162,6 +179,13 @@ li::before {
 
 }
 
+code{
+    background:var(--col-black);
+    color:var(--col-white);
+    padding: calc(var(--grid-unit)/2) var(--grid-unit);
+    border-radius:4px;
+}
+
 
 /* ================================================ */
 /* SECTIONS */
@@ -227,6 +251,7 @@ table,th,td{
 
 .col_red{background-color:var(--col-red);}
 .col_orange{background-color:var(--col-orange);}
+.col_brown{background-color:var(--col-brown);}
 .col_yellow{background-color:var(--col-yellow);}
 .col_green{background-color:var(--col-green);}
 .col_cyan{background-color:var(--col-cyan);}
@@ -243,3 +268,26 @@ menu {
 }
 
 
+/* ================================================ */
+/* BUTTONS*/
+/* ================================================ */
+
+button{
+    padding: calc(1 * var(--grid-unit)) calc(4 * var(--grid-unit));
+    border-radius:4px;
+    border:0;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity:0.8;
+}
+
+button.primary{
+    color:white;
+}
+
+
+button.blue{
+    background:linear-gradient(var(--col-blue-light),var(--col-blue-dark));
+}
