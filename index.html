@@ -97,14 +97,14 @@
                         <td>Serif</td>
                     </tr>
                     <tr>
-                            <td>
-                                <p class="sans">Body Sans</p>
-                            </td>
-                            <td>18px</td>
-                            <td>400</td>
-                            <td>1.5</td>
-                            <td>Sans-serif</td>
-                        </tr>
+                        <td>
+                            <p class="sans">Body Sans</p>
+                        </td>
+                        <td>18px</td>
+                        <td>400</td>
+                        <td>1.5</td>
+                        <td>Sans-serif</td>
+                    </tr>
                     <tr>
                         <td>
                             <p class="major">Body Major</p>
@@ -309,7 +309,41 @@
         <section>
             <h2>Buttons</h2>
             <p>Primary buttons adopt one of the base colours</p>
-            <button class="primary blue">Button</button>
+            <button class="btn primary blue">Button</button>
+
+            <div class="row row2">
+                <div class="col colCenter">
+                    <button class="btn primary green">Button</button>
+                </div>
+                <div class="col">
+                    <p>Primary buttons adopt one of the base colours</p>
+                </div>
+            </div>
+            <div class="row row2">
+                <div class="col colCenter">
+                    <button class="btn secondary">Button</button>
+                </div>
+                <div class="col">
+                    <p>Primary buttons adopt one of the base colours</p>
+                </div>
+            </div>
+        </section>
+        <section class="section_box">
+                <h2>Box</h2>
+                <p>a box is the foundation compoent for grouping a collection of related elements together, it is used by other components such as modals and cards to create more complex elements.</p>
+        </section>
+        <section class="section_card">
+            <h2>Card</h2>
+            <button class="card box card_pink">
+                <img src="sweets-unsplash-laura-briedis.jpg" alt="books">
+                    <p class="card_title major">The Card Title is allowed to wrap</p>
+                    
+                        <p class="card_content minor">The card content should provide a brief overfiew of the feature or article, it can span multiple rows of text</p>
+                   
+            </button>
+            
+            <p>As cards are entirely clickable, they must not contain any buttons within their box</p>
+            <p>to signify that the entire card is clickable, they require a clear hover and focus state</p>
         </section>
     </main>
 

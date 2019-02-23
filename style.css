@@ -40,9 +40,13 @@ section > *{
 
 
 /*Dark - 10 Brightness*/
-
+/* need a highlight and pastel colour */
+--col-blue-highlight:#007CAB;
 --col-blue-light:#005778;
 --col-blue-dark:#003245;
+
+--col-green-light:#4FA636;
+--col-green-dark:#377326;
 
 
 }
@@ -66,11 +70,21 @@ p.small{
 
 p.minor, td{
     /* body minor*/
-    font-size: 15px;
+    font-size: 14px;
     font-family: var(--type-serif);
     font-weight:400;
     color:var(--col-black);
 }
+
+/*
+p.meta{
+    
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight:400;
+    color:var(--col-black);
+}
+*/
 
 p.minor_bold, th{
     
@@ -101,6 +115,16 @@ p.sans, button{
     color:var(--col-black);
 }
 
+p.sans_bold{
+        /* body sans bold*/
+        font-size: 18px;
+        font-family: var(--type-sans);
+        font-weight:700;
+        line-height:1.5;
+        text-align: left;
+        color:var(--col-black);
+}
+
 p.major{
     /* body major*/
     font-size: 21px;
@@ -108,6 +132,8 @@ p.major{
     font-weight:400;
     color:var(--col-black);
 }
+
+
 
 h3{
       /* header minor */
@@ -202,12 +228,17 @@ section{
     color:white;
 }
 
+.section_card{
+    background:var(--col-grey-minor);
+}
+
 /* ================================================ */
 /* ASIDE */
 /* ================================================ */
 
 aside{
     background:var(--col-grey-minor);
+    border-right:1px solid var(--col-grey);
 }
 
 /* ================================================ */
@@ -228,8 +259,13 @@ tr:nth-child(even){
 }
 
 table,th,td{
-    border:1px solid var(--col-black);
+    border:1px solid var(--col-grey);
     padding: 0.5em 0.8em;
+}
+
+thead{
+    background:var(--col-grey);
+   
 }
 
 /* ================================================ */
@@ -267,27 +303,111 @@ menu {
     position: fixed;
 }
 
+.row{
+    display:flex;
+}
+
+.row2 .col{
+    flex:0 0 50%;
+}
+
+.colCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* ================================================ */
 /* BUTTONS*/
 /* ================================================ */
 
 button{
-    padding: calc(1 * var(--grid-unit)) calc(4 * var(--grid-unit));
-    border-radius:4px;
     border:0;
+    margin:0;
+    padding:0;
     cursor: pointer;
 }
 
-button:hover{
-    opacity:0.8;
+.btn{
+    padding: calc(1 * var(--grid-unit)) calc(4 * var(--grid-unit));
+    border-radius:4px;
+    border:0;
+   
+    box-shadow: 0 2px 2px rgba(0,0,0,0.4);
+    position: relative;
 }
 
-button.primary{
+.btn:hover::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: hsla(0, 0%, 100%, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: soft-light;
+    border-color: var(--col-blue-highlight);
+}
+
+.btn.primary{
     color:white;
 }
 
+.btn{
+    background:linear-gradient(var(--col-grey-minor), var(--col-grey));
+    border:2px solid var(--col-grey);
+}
 
-button.blue{
-    background:linear-gradient(var(--col-blue-light),var(--col-blue-dark));
+.btn.blue{
+    background:linear-gradient(var(--col-blue-light), var(--col-blue-dark));
+    border:2px solid var(--col-blue-dark);
+}
+
+.btn.green{
+    background:linear-gradient(var(--col-green-light), var(--col-green-dark));
+    border:2px solid var(--col-green-dark);
+}
+
+
+/* ================================================ */
+/* BOX */
+/* ================================================ */
+.box{
+    background: var(--col-white);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    border-radius: 4px;
+}
+
+/* ================================================ */
+/* CARDS */
+/* ================================================ */
+
+.card{
+max-width:300px;
+overflow:hidden;
+
+}
+
+.card_title{
+   padding:calc(2 * var(--grid-unit)) calc(2 * var(--grid-unit));
+   margin:0;
+}
+.card_content{
+    padding:calc(1 * var(--grid-unit)) calc(2 * var(--grid-unit)) calc(2 * var(--grid-unit));
+    margin:0;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit: cover;
+}
+
+.card_yellow img{
+    border-bottom:calc(1 * var(--grid-unit)) solid var(--col-yellow);
+}
+.card_pink img{
+    border-bottom:calc(1 * var(--grid-unit)) solid var(--col-pink);
 }
