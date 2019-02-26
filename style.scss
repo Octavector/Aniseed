@@ -14,8 +14,11 @@ section > *{
     max-width:800px;
 }
 
+
+
+
 /* ================================================ */
-/* TYPOGRAPHY */
+/* VARIABLES */
 /* ================================================ */
 
 :root{
@@ -36,24 +39,39 @@ section > *{
 --col-yellow: #F8B500;
 --col-green:#438C2E;
 --col-cyan:#00ADB5;
---col-blue:#00445E;
+--col-blue:#00586E;
 --col-purple:#681E70;
 --col-pink:#CF1264;
 
+//Shades
 
-/*Dark - 10 Brightness*/
-/* need a highlight and pastel colour */
---col-blue-highlight:#007CAB;
---col-blue-light:#005778;
---col-blue-dark:#003245;
+--col-red-highlight:#FF2727;
+--col-red-light:#FF4A4A;
+--col-red-dark:#E33636;
+--col-red-pastel:#FFCECE;
 
+--col-blue-highlight:#008FFF;
+--col-blue-light:#006C87;
+--col-blue-dark:#004354;
+--col-blue-pastel:#BCE5EF;
+
+--col-green-highlight:#43DC17;
 --col-green-light:#4FA636;
 --col-green-dark:#377326;
-
-
-
+--col-green-pastel:#BFF7AF;
 
 }
+
+
+  
+/* ================================================ */
+/* TYPOGRAPHY */
+/* ================================================ */
+
+
+
+
+
 
 p.tiny{
     /* tiny */
@@ -179,10 +197,10 @@ h1.hero{
 }
 
 blockquote{
-    border-left: calc(1 * var(--grid-unit)) blue solid;
+    border-left: calc(1 * var(--grid-unit)) var(--col-blue) solid;
     padding: calc(2 * var(--grid-unit));
     margin: 0 0 0 calc(4 * var(--grid-unit));
-    background-color: #ced8ff;
+    background-color:var(--col-blue-pastel);
 }
 
 ul{
@@ -250,6 +268,7 @@ aside{
 table{
     width:100%;
     border-collapse: collapse;
+    margin-bottom:calc(4 * var(--grid-unit));
 }
 
 td > *{
@@ -296,6 +315,16 @@ thead{
 .col_blue{background-color:var(--col-blue);}
 .col_purple{background-color:var(--col-purple);}
 .col_pink{background-color:var(--col-pink);}
+
+
+
+@each $col in red,blue,green {
+    .col_#{$col}_highlight{background-color:var(--col-#{$col}-highlight);}
+.col_#{$col}_light{background-color:var(--col-#{$col}-light);}
+.col_#{$col}_dark{background-color:var(--col-#{$col}-dark);}
+.col_#{$col}_pastel{background-color:var(--col-#{$col}-pastel);}
+  }
+
 
 
 /* ================================================ */
@@ -359,17 +388,21 @@ button{
 
 .btn{
     background:linear-gradient(var(--col-grey-minor), var(--col-grey));
-    border:2px solid var(--col-grey);
+    border:1px solid var(--col-grey);
+    border-top:2px solid var(--col-grey);
 }
 
 .btn.blue{
     background:linear-gradient(var(--col-blue-light), var(--col-blue-dark));
-    border:2px solid var(--col-blue-dark);
+    border:1px solid var(--col-blue-dark);
+    border-top:2px solid var(--col-blue-highlight);
 }
+
 
 .btn.green{
     background:linear-gradient(var(--col-green-light), var(--col-green-dark));
-    border:2px solid var(--col-green-dark);
+    border:1px solid var(--col-green-dark);
+    border-top:2px solid var(--col-green-highlight);
 }
 
 
@@ -476,7 +509,7 @@ overflow:hidden;
 }
 
 .do_dont_do .do_dont_title:before{
-    background-image:url(icons-do.svg);
+    background-image:url(../icons-do.svg);
 }
 
 .do_dont_dont .do_dont_title{
@@ -485,7 +518,7 @@ overflow:hidden;
 }
 
 .do_dont_dont .do_dont_title:before{
-    background-image:url(icons-dont.svg);
+    background-image:url(../icons-dont.svg);
 }
 
 

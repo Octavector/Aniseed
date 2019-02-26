@@ -8,7 +8,7 @@
     <title>Aniseed</title>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Krub:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -20,17 +20,24 @@
                 <li><a href="">Grid</a></li>
                 <li> <a href="">Typography</a></li>
                 <li> <a href="">Colour</a></li>
-                <li> <a href="">Buttons</a></li>
+                <li><a href="">Iconography</a></li>
+            </ul>
+            <p>Elements</p>
+            <ul>
+                <li><a href="">Drop shadow</a></li>
+                <li> <a href="">Border Radius</a></li>
             </ul>
             <p>Components</p>
             <ul>
-                <li><a href="">Cards</a></li>
-                <li><a href="">Badges</a></li>
-                <li><a href="">Messages</a></li>
-                <li><a href="">Forms</a></li>
-                <li><a href="">Tables</a></li>
+                <li> <a href="">Button</a></li>
+                <li> <a href="">Box</a></li>
+                <li><a href="">Card</a></li>
+                <li><a href="">Badge</a></li>
+                <li><a href="">Message</a></li>
+                <li><a href="">Form</a></li>
+                <li><a href="">Table</a></li>
             </ul>
-            <p class="tiny">version 0.0.1</p>
+            <p class="system_small">version 0.0.1</p>
         </menu>
     </aside>
     <main>
@@ -42,6 +49,9 @@
             <h2>Introduction</h2>
             <p>Aniseed is a lightweight design system which represents a nudge away from flat and material designs to
                 provide more affordance for controls and interface elements</p>
+
+            <p>explain elements vs components. components are complete items. Elements are guidelines for speciifc
+                properties which are applied to components but are themsleves not completed items</p>
         </section>
         <section>
             <h2>Grid</h2>
@@ -56,10 +66,11 @@
                         <th>Size</th>
                         <th>Weight</th>
                         <th>Line height</th>
-                        <th>classification</th>
+                        <th>Class</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <!--
                     <tr>
                         <td>
                             <p class="tiny">Tiny</p>
@@ -69,6 +80,7 @@
                         <td>1.5</td>
                         <td>Serif</td>
                     </tr>
+                -->
                     <tr>
                         <td>
                             <p class="small">Small</p>
@@ -77,6 +89,15 @@
                         <td>400</td>
                         <td>1.5</td>
                         <td>Serif</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="system_small">System Small</p>
+                        </td>
+                        <td>13px</td>
+                        <td>400</td>
+                        <td>1.5</td>
+                        <td>System sans</td>
                     </tr>
                     <tr>
                         <td>
@@ -158,11 +179,14 @@
 
             <h3>Pull Quote</h3>
             <blockquote>
-                <p class="major">You know the golden rule, don’t you boy? Those who have the gold make the rules.</p>
+                <p class="major">I must create a system or be enslaved by another mans; I will not reason and compare:
+                    my business is to create.</p>
                 <footer>
-                    <p class="minor italic"> — Crazy hunch-backed old guy from the movie Aladdin</p>
+                    <p class="minor italic"> — William Blake</p>
                 </footer>
             </blockquote>
+
+            
 
             <h3>Lists</h3>
             <ul>
@@ -283,7 +307,7 @@
                             <div class="swatch col_blue"></div>
                         </td>
                         <td>Blue</td>
-                        <td><code>#00445E</code></td>
+                        <td><code>#00586E</code></td>
                         <td></td>
                     </tr>
                     <tr>
@@ -305,9 +329,189 @@
                 </tbody>
             </table>
 
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Base Colour</th>
+                        <th>highlight</th>
+                        <th>light</th>
+                        <th>dark</th>
+                        <th>pastel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="swatch col_red"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_red_highlight"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_red_light"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_red_dark"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_red_pastel"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_orange"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_orange_highlight"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_orange_light"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_orange_dark"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_orange_pastel"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_brown"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_brown_highlight"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_brown_light"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_brown_dark"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_brown_pastel"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_yellow"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_yellow_highlight"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_yellow_light"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_yellow_dark"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_yellow_pastel"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_green"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_green_highlight"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_green_light"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_green_dark"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_green_pastel"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                <div class="swatch col_cyan"></div>
+                            </td>
+                            <td>
+                                <div class="swatch col_cyan_highlight"></div>
+                            </td>
+                            <td>
+                                <div class="swatch col_cyan_light"></div>
+                            </td>
+                            <td>
+                                <div class="swatch col_cyan_dark"></div>
+                            </td>
+                            <td>
+                                <div class="swatch col_cyan_pastel"></div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td>
+                            <div class="swatch col_blue"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_blue_highlight"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_blue_light"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_blue_dark"></div>
+                        </td>
+                        <td>
+                            <div class="swatch col_blue_pastel"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                <div class="swatch col_purple"></div>
+                            </td>
+                            <td>
+                                <div class="swatch col_purple_highlight"></div>
+                            </td>
+                            <td>
+                                <div class="swatch col_purple_light"></div>
+                            </td>
+                            <td>
+                                <div class="swatch col_purple_dark"></div>
+                            </td>
+                            <td>
+                                <div class="swatch col_purple_pastel"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                                <td>
+                                    <div class="swatch col_pink"></div>
+                                </td>
+                                <td>
+                                    <div class="swatch col_pink_highlight"></div>
+                                </td>
+                                <td>
+                                    <div class="swatch col_pink_light"></div>
+                                </td>
+                                <td>
+                                    <div class="swatch col_pink_dark"></div>
+                                </td>
+                                <td>
+                                    <div class="swatch col_pink_pastel"></div>
+                                </td>
+                            </tr>
+
+                </tbody>
+            </table>
+
+        </section>
+
+        <section>
+            <h2>Iconography</h2>
+            <p>24px x 24px</p>
+            <p>1px x 1px grid </p>
+            <p>3px / 4px strokes</p>
+            <p>3px edge padding</p>
+            <p>square caps</p>
+            <p>round joins corners</p>
+            <p>circular enclosure</p>
         </section>
         <section>
-            <h2>Buttons</h2>
+            <h2>Button</h2>
             <p>Primary buttons adopt one of the base colours</p>
             <button class="btn primary blue">Button</button>
 
@@ -329,21 +533,60 @@
             </div>
         </section>
         <section class="section_box">
-                <h2>Box</h2>
-                <p>a box is the foundation compoent for grouping a collection of related elements together, it is used by other components such as modals and cards to create more complex elements.</p>
+            <h2>Box</h2>
+            <p>a box is the foundation compoent for grouping a collection of related elements together, it is used by
+                other components such as modals and cards to create more complex elements.</p>
         </section>
         <section class="section_card">
             <h2>Card</h2>
             <button class="card box card_pink">
                 <img src="sweets-unsplash-laura-briedis.jpg" alt="books">
-                    <p class="card_title major">The Card Title is allowed to wrap</p>
-                    
-                        <p class="card_content minor">The card content should provide a brief overfiew of the feature or article, it can span multiple rows of text</p>
-                   
+                <p class="card_title major">The Card Title is allowed to wrap</p>
+
+                <p class="card_content minor">The card content should provide a brief overfiew of the feature or
+                    article, it can span multiple rows of text</p>
+
             </button>
-            
+
             <p>As cards are entirely clickable, they must not contain any buttons within their box</p>
             <p>to signify that the entire card is clickable, they require a clear hover and focus state</p>
+        </section>
+        <section>
+            <h2>Badge</h2>
+            <p>Used to highlight important meta or supporting data. to provide status information</p>
+            <div class="badge cyan">Badge</div>
+            <div class="badge clear">Badge</div>
+            <div class="row row2">
+                <div class="col colCenter">
+                    <div class="do_dont do_dont_do">
+                        <p class="do_dont_title">Do</p>
+                        <div class="do_dont_content">
+                            <ul>
+                                <li> use sparingly</li>
+                                <li>show if state has changed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col colCenter">
+                    <div class="do_dont do_dont_dont">
+                        <p class="do_dont_title">Do not</p>
+                        <div class="do_dont_content">
+                            <ul>
+                                <li>Contrast</li>
+                                <li>Not interactive</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Message</h2>
+            <div class="message_bar message_bar_info">
+                <img src="icons-info.svg" alt="">
+                Latest changes have been saved
+            </div>
         </section>
     </main>
 
