@@ -502,6 +502,12 @@ overflow:hidden;
     background-color: transparent;
 }
 
+// NOTE: badges for all color vriants for better contrast? or limit to select few?
+
+@each $col in red,orange,brown,gold, green, cyan, blue, purple, pink {
+    .badge.#{$col}{background-color:var(--col-#{$col}-highlight);}
+}
+
 /* ================================================ */
 /* DO DONT */
 /* ================================================ */
