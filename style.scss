@@ -380,6 +380,13 @@ menu {
     align-items: center;
 }
 
+//Top aligned variant of colCenter, used for cards.
+.colCenter_top{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 
 /* ================================================ */
 /* BUTTONS*/
@@ -451,10 +458,16 @@ button{
 /* CARDS */
 /* ================================================ */
 
+.cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
 .card{
 max-width:300px;
 overflow:hidden;
-
+margin:calc(1 * var(--grid-unit)) calc(2 * var(--grid-unit));
 }
 
 .card_title{
@@ -476,12 +489,17 @@ overflow:hidden;
     object-fit: cover;
 }
 
-.card_gold img{
-    border-bottom:calc(1 * var(--grid-unit)) solid var(--col-gold);
-}
-.card_pink img{
-    border-bottom:calc(1 * var(--grid-unit)) solid var(--col-pink);
-}
+
+
+@each $col in red,orange,brown,gold, green, cyan, blue, purple, pink {
+    .card_#{$col} img{
+        border-bottom:calc(1 * var(--grid-unit)) solid var(--col-#{$col});
+    }
+
+    .card_#{$col}:hover, .card_#{$col}:focus{
+        box-shadow:0 0 0 calc(0.5 * var(--grid-unit)) var(--col-#{$col});
+    }
+  }
 
 
 /* ================================================ */
