@@ -466,6 +466,10 @@ overflow:hidden;
     margin:0;
 }
 
+.card_badges{
+    padding:calc(1 * var(--grid-unit)) calc(2 * var(--grid-unit)) calc(2 * var(--grid-unit));
+}
+
 .card img{
     width:100%;
     height:200px;
@@ -497,16 +501,28 @@ overflow:hidden;
     border-radius:var(--border-radius);
 }
 
-.badge.clear{
+.badge.badge_clear{
     border:1px solid var(--col-grey-major);
     background-color: transparent;
 }
 
 // NOTE: badges for all color vriants for better contrast? or limit to select few?
 
-@each $col in red,orange,brown,gold, green, cyan, blue, purple, pink {
-    .badge.#{$col}{background-color:var(--col-#{$col}-highlight);}
+@each $col in grey-minor, white, red,orange,gold, green, cyan {
+    .badge.badge_#{$col}{
+        background-color:var(--col-#{$col});
+        border:1px solid var(--col-#{$col});
+    }
 }
+
+@each $col in black, grey-major, brown, blue, purple, pink {
+    .badge.badge_#{$col}{
+        background-color:var(--col-#{$col});
+        color:var(--col-white);
+        border:1px solid var(--col-#{$col});
+    }
+}
+
 
 /* ================================================ */
 /* DO DONT */
@@ -576,6 +592,7 @@ overflow:hidden;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom:calc(4 * var(--grid-unit));
 }
 .message_bar img{
     width:24px;
@@ -583,14 +600,14 @@ overflow:hidden;
     margin-right:var(--grid-unit);
 }
 
-/*
-.message_bar:after{
-    content:'';
-    width:24px;
-    height:24px;
-    display:block;
-    position: absolute;
-    background-image:url(icons-info.svg);
-    top:calc(1 * var(--grid-unit));
-    left:calc(1 * var(--grid-unit));
-}*/
+.message_bar_confirm{
+    background-color:var(--col-green-pastel);
+    border:1px solid var(--col-green);
+    border-left:calc(1 * var(--grid-unit)) solid var(--col-green);
+}
+
+.message_bar_error{
+    background-color:var(--col-red-pastel);
+    border:1px solid var(--col-red);
+    border-left:calc(1 * var(--grid-unit)) solid var(--col-red);
+}
